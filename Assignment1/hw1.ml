@@ -14,8 +14,20 @@ let rec computed_fixed_point eq f x =
 	if eq x (f x) then x 
 	else computed_fixed_point eq f (f x);;
 
-let filter_blind_alleys g = 
-	snd(g) = remove_extras snd(g);;
+let get_start g = 
+    	match g with 
+		|(a,b) -> a;;
 
-let remove_extras l = 
-	
+let filter_blind_alleys g = 
+	(get_start g, remove_rules (get_start g) snd(g) [] []);;
+
+let rec check_RHS rhs terminal_sym = 
+	match rhs with 
+	|[] -> true
+	|h::t -> match h with 
+		  | (N a) -> (match subset [h] terminal_sym with
+			      | false -> false
+			      | true ->check_RHS t terminal_sym)
+                  | (T a) -> check_RHS t terminal_sym;;
+
+
