@@ -13,37 +13,31 @@ let proper_subset a b =
 let rec computed_fixed_point eq f x =
 	if eq x (f x) then x 
 	else computed_fixed_point eq f (f x);;
+		           
+let get_start g =
+        match g with
+                |(a,b) -> a;;
 
-let get_start g = 
-    	match g with 
-		|(a,b) -> a;;
+let rec check_RHS rhs term_val =
+        match rhs with
+        |[] -> true
+        |h::t -> match h with
+                 |(N a) -> (match subset [a] term_val with                                                  |false -> false
+                           |true ->check_RHS t term_val)                                          |(T a) -> check_RHS t term_val;;
 
-let filter_blind_alleys g = 
-	(get_start g, remove_rules (get_start g) snd(g) [] []);;
+let check_rule rule term_val =
+        match rule with
+        |(a,b) -> match (check_RHS b term_val) with
+                  |true -> true
+                  |false -> false;;
 
-let rec check_RHS rhs terminal_sym =
-	match rhs with
-	|[] -> true
-	|h::t -> match h with
-		 |(N a) -> (match subset [h] terminal_sym with
-			   |false -> false
-		           |true ->check_RHS t terminal_sym)
-                 |(T a) -> check_RHS t terminal_sym;;
+let rec get_terminals rules =
+        match rules with
+        |[] -> []
+        |h::t -> match h with
+                 |(a,_) -> get_terminals t @ [a] ;;
 
-let check_rule rule term_sym = 
-  	match rule with
-  	|(a,b) -> match (check_RHS b term_sym) with
-  		  |true -> true
-  		  |false -> false;;
-
-let rec get_terminals rules = 
-	match rules with 
-	|[] -> []
-	|h::t -> get_terminals t @ [T (fst(h))];;
-
-let rec mark_terminal orig_list curr_list term_list = 
-	match curr_list with
-	|[] -> term_list
-	|h::t -> match check_rule h (get_terminals term_list) with
-		 |true -> mark_terminal orig_list orig_list (term_list @ [h])
-		 |false -> mark_terminal orig_list t term_list;;
+let rec mark_terminal orig_list curr_list term_list =
+        match curr_list with
+        |[] -> term_list
+        |h::t -> match (check_rule h [get_terminals term_list]) with                              |true -> mark_terminal orig_list t term_list @ [h]                       |false -> mark_terminal orig_list t term_list;;
