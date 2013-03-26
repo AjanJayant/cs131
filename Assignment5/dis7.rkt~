@@ -1,0 +1,4 @@
+(define (f myreturn) 1 (* 2 3) (myreturn 2) (myreturn 4) 99)
+
+(f +)
+(call/cc f)

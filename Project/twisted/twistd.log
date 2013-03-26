@@ -1,0 +1,67 @@
+2013-03-07 15:11:53-0800 [-] Log opened.
+2013-03-07 15:11:53-0800 [-] twistd 12.3.0 (/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python 2.7.2) starting up.
+2013-03-07 15:11:53-0800 [-] reactor class: twisted.internet.selectreactor.SelectReactor.
+2013-03-07 15:11:53-0800 [-] ServerFactory starting on 12590
+2013-03-07 15:11:53-0800 [-] Starting factory <twisted.internet.protocol.ServerFactory instance at 0x1049cd6c8>
+2013-03-07 15:20:15-0800 [-] Received SIGINT, shutting down.
+2013-03-07 15:20:15-0800 [-] (TCP Port 12590 Closed)
+2013-03-07 15:20:15-0800 [-] Stopping factory <twisted.internet.protocol.ServerFactory instance at 0x1049cd6c8>
+2013-03-07 15:20:15-0800 [-] Main loop terminated.
+2013-03-07 15:20:15-0800 [-] Server Shut Down.
+2013-03-07 15:20:17-0800 [-] Log opened.
+2013-03-07 15:20:17-0800 [-] twistd 12.3.0 (/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python 2.7.2) starting up.
+2013-03-07 15:20:17-0800 [-] reactor class: twisted.internet.selectreactor.SelectReactor.
+2013-03-07 15:20:17-0800 [-] ServerFactory starting on 12590
+2013-03-07 15:20:17-0800 [-] Starting factory <twisted.internet.protocol.ServerFactory instance at 0x108d926c8>
+2013-03-07 16:20:20-0800 [-] Received SIGINT, shutting down.
+2013-03-07 16:20:20-0800 [-] (TCP Port 12590 Closed)
+2013-03-07 16:20:20-0800 [-] Stopping factory <twisted.internet.protocol.ServerFactory instance at 0x108d926c8>
+2013-03-07 16:20:20-0800 [-] Main loop terminated.
+2013-03-07 16:20:20-0800 [-] Server Shut Down.
+2013-03-07 16:20:25-0800 [-] Log opened.
+2013-03-07 16:20:25-0800 [-] twistd 12.3.0 (/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python 2.7.2) starting up.
+2013-03-07 16:20:25-0800 [-] reactor class: twisted.internet.selectreactor.SelectReactor.
+2013-03-07 16:20:25-0800 [-] ServerFactory starting on 12590
+2013-03-07 16:20:25-0800 [-] Starting factory <twisted.internet.protocol.ServerFactory instance at 0x1046c56c8>
+2013-03-07 16:20:43-0800 [twisted.internet.protocol.ServerFactory] Got new client!
+2013-03-07 16:20:51-0800 [MyChat,0,127.0.0.1] received 'AJan'
+2013-03-07 16:21:00-0800 [MyChat,0,127.0.0.1] received 'hello'
+2013-03-07 16:21:15-0800 [MyChat,0,127.0.0.1] received '^]'
+2013-03-07 16:21:21-0800 [MyChat,0,127.0.0.1] received "'^]'"
+2013-03-07 16:21:28-0800 [MyChat,0,127.0.0.1] received '\xff\xf4\xff\xfd\x06'
+2013-03-07 16:21:30-0800 [MyChat,0,127.0.0.1] received '\xff\xfb\x06\x04'
+2013-03-07 16:21:31-0800 [MyChat,0,127.0.0.1] received '\xff\xf4\xff\xfd\x06'
+2013-03-07 16:21:32-0800 [MyChat,0,127.0.0.1] received '\xff\xfb\x06'
+2013-03-07 16:21:32-0800 [MyChat,0,127.0.0.1] received ''
+2013-03-07 16:21:32-0800 [MyChat,0,127.0.0.1] received ''
+2013-03-07 16:21:34-0800 [MyChat,0,127.0.0.1] received '\xff\xf4\xff\xfd\x06\xff\xf4\xff\xfd\x06'
+2013-03-07 16:21:34-0800 [MyChat,0,127.0.0.1] received '\xff\xfb\x06\xff\xfb\x06'
+2013-03-07 16:21:38-0800 [MyChat,0,127.0.0.1] received '\x1b\x1b\x1b\x1b'
+2013-03-07 16:21:39-0800 [MyChat,0,127.0.0.1] received '\x1b'
+2013-03-07 16:21:39-0800 [MyChat,0,127.0.0.1] received '\x1b'
+2013-03-07 16:21:40-0800 [MyChat,0,127.0.0.1] received '\x1b'
+2013-03-07 16:21:43-0800 [MyChat,0,127.0.0.1] received '\x1b'
+2013-03-07 16:21:48-0800 [MyChat,0,127.0.0.1] received "\x1b[A\x1b[A\x1b[A'"
+2013-03-07 16:21:49-0800 [MyChat,0,127.0.0.1] received "''''"
+2013-03-07 16:21:50-0800 [MyChat,0,127.0.0.1] received ''
+2013-03-07 16:21:50-0800 [MyChat,0,127.0.0.1] received ''
+2013-03-07 16:21:51-0800 [MyChat,0,127.0.0.1] received "''''''"
+2013-03-07 16:21:51-0800 [MyChat,0,127.0.0.1] received ''
+2013-03-07 16:21:51-0800 [MyChat,0,127.0.0.1] received ''
+2013-03-07 16:21:51-0800 [MyChat,0,127.0.0.1] received ''
+2013-03-07 16:21:55-0800 [MyChat,0,127.0.0.1] Lost a client!
+2013-03-07 16:22:54-0800 [-] Received SIGINT, shutting down.
+2013-03-07 16:22:54-0800 [-] (TCP Port 12590 Closed)
+2013-03-07 16:22:54-0800 [-] Stopping factory <twisted.internet.protocol.ServerFactory instance at 0x1046c56c8>
+2013-03-07 16:22:54-0800 [-] Main loop terminated.
+2013-03-07 16:22:54-0800 [-] Server Shut Down.
+2013-03-07 16:24:58-0800 [-] Log opened.
+2013-03-07 16:24:58-0800 [-] twistd 12.3.0 (/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python 2.7.2) starting up.
+2013-03-07 16:24:58-0800 [-] reactor class: twisted.internet.selectreactor.SelectReactor.
+2013-03-07 16:24:58-0800 [-] ServerFactory starting on 12590
+2013-03-07 16:24:58-0800 [-] Starting factory <twisted.internet.protocol.ServerFactory instance at 0x10e9796c8>
+2013-03-07 16:25:17-0800 [-] Received SIGINT, shutting down.
+2013-03-07 16:25:17-0800 [-] (TCP Port 12590 Closed)
+2013-03-07 16:25:17-0800 [-] Stopping factory <twisted.internet.protocol.ServerFactory instance at 0x10e9796c8>
+2013-03-07 16:25:17-0800 [-] Main loop terminated.
+2013-03-07 16:25:17-0800 [-] Server Shut Down.

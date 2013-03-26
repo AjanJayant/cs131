@@ -1,0 +1,28 @@
+I had many problems with the given homework:
+
+1. I managed to implement convert_grammar successfully, though it took me much time. 
+   I did not realize we could bindthe grammar by passing it the first grammar as an 
+   argument to a function call that returned a function. I tested it on both 
+   giant_grammar and awksub_grammar.
+
+2. My parse_prefix function does not work correctly. After much difficulty, I was able to
+   compile my program but it did not give me a correct output for any of the test cases. 
+   I implement my function in the following way: I use three functions, an or_matcher, and
+   and_matcher and a symbol_matcher.
+   An or_matcher is used to go through a list of rules produced using a production function
+   from a non-terminal symbol. If the first rule returns something using a matcher, then 
+   it is called otherwise the next rules is matched using the or_matcher.
+   An and_matcher goes through each symbol and applies a symbol matcher; if it reaches the
+   end, it calls the acceptor.
+   A symbol_matcher matches each symbol in the matcher checking if it is non-terminal or
+   terminal. If it is a non-terminal, the or_matcher is called. Otherwise if it is a terminal
+   matching the fragment's symbol, the and_matcher is called with the fragment's tail as well
+   as the previous rules' tail. Otherwise it just calls it on the current rules tail. 
+   It works for a very basic implementation, described below 
+   let letter_gram = (A, function
+    |A -> [[N B; N C]]
+    |B -> [[N C]]
+    |C -> [[T "?"];[T "!"]]);;
+   let test6 = ((parse_prefix letter_gram accept_all ["?"; "!"; "!"];
+   It does not work for any of the test cases given in the spec, however. For most of the 
+   cases I get a List.hd exception.

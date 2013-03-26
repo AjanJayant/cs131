@@ -1,0 +1,23 @@
+I used the following links while solving this homework assignment:
+http://www.scheme.com/tspl2d/binding.html
+http://www.eecs.berkeley.edu/~bh/ssch7/variables.html
+http://www.dotnetperls.com/cons-car-cdr-cadr-scheme
+
+I arrived at my solution by using the hint code as building blocks for my implementation. I anonymously created a acceptor like this 
+lambda () cc (match-junk (- k 1) (cdr frag)
+I figured out how to call it using the following to (cons l (lambda () (continue #F)))
+
+My call to call/cc captures the current continuation and allows me to pass a anonyms fucntion called cc as the acceptor, replacing the acceptor with these two lines.
+
+Intially, I falied this test case:
+(eq? (first-match matcher2 frag2)
+     (acceptable-match matcher4
+           frag2
+           (lambda (frag) (if (eq? frag frag2) #f frag))))
+; ⇒ #t
+
+because I didn't realise that it matched the empty fragment.
+
+I failed the last test case; I am not sure why but I assume it's because I didn't bactrack covering all permutations possible.
+I passed all the test cases
+
